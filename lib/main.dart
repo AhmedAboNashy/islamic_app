@@ -14,6 +14,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       routes: {HomeScreen.routeName :(_) =>HomeScreen()}, //native
       initialRoute: HomeScreen.routeName,
+      themeMode: ThemeMode.dark,
 
     );
   }
