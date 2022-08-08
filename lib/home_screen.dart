@@ -2,9 +2,10 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:islami_app/colors.dart';
 import 'package:islami_app/hadeth.dart';
-import 'package:islami_app/quran.dart';
+import 'package:islami_app/quran/quran.dart';
 import 'package:islami_app/radio.dart';
 import 'package:islami_app/sebha.dart';
+import 'package:islami_app/setting.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -16,7 +17,11 @@ class HomeScreen extends StatefulWidget {
 
 class _HomeScreenState extends State<HomeScreen> {
   int SelectedIndex = 0;
-
+  List<String> writer = [
+    "بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيم الْحَمْدُ لِلَّهِ رَبِّ الْعَالَمِينَ الرَّحْمَنِ الرَّحِيمِ مَالِكِ يَوْمِ الدِّينِ إِيَّاكَ نَعْبُدُ وَإِيَّاكَ نَسْتَعِينُ اهْدِنَا الصِّرَاطَ "
+        "الْمُسْتَقِيمَ صِرَاطَ الَّذِينَ أَنْعَمْتَ عَلَيْهِمْ غَيْرِ الْمَغْضُوبِ عَلَيْهِمْ وَلَا الضَّالِّين"
+  ];
+  List<Widget> moving = [quran(), HadethTap(), sebha(), radio(), setting()];
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -60,6 +65,8 @@ class _HomeScreenState extends State<HomeScreen> {
               BottomNavigationBarItem(
                   icon: ImageIcon(AssetImage('assets/images/icon_radio.png')),
                   label: 'Radio'),
+              BottomNavigationBarItem(
+                  icon: Icon(Icons.settings), label: 'Setting'),
             ],
           ),
         ),
@@ -67,6 +74,4 @@ class _HomeScreenState extends State<HomeScreen> {
       ),
     );
   }
-
-  List<Widget> moving = [quran(), hadeth(), sebha(), radio(),];
 }
