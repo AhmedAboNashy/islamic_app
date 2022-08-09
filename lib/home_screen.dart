@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:islami_app/colors.dart';
-import 'package:islami_app/hadeth.dart';
+import '../assets/ahadeth/hadeth.dart';
 import 'package:islami_app/quran/quran.dart';
 import 'package:islami_app/radio.dart';
 import 'package:islami_app/sebha.dart';

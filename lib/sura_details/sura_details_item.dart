@@ -11,6 +11,7 @@ class SuraDetailsItem extends StatelessWidget {
         suraName,
         style: Theme.of(context).textTheme.headline2,
       ),
+
     );
   }
 }
